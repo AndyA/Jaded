@@ -1,8 +1,16 @@
 html, body {
   font-family: Arial, Sans;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 #map {
-  width: 800px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
+}
+
+.map-tile {
+  border: 1px dotted #aaa;
+  font-size: 10px;
 }
