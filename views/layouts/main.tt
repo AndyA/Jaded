@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>[% title | html %]</title>
+    [% resources %]
   </head>
   <body>
     [% content %]
