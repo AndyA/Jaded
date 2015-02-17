@@ -1,0 +1,2846 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#orb-modules, td, th, ul.search-pages .fa-stack-1x {
+	font-family: Arial,Helvetica,freesans,sans-serif;
+	
+}
+
+#orb-modules, td, th {
+	font-size: 16px;
+	color: #333;
+	line-height: 1.4em;
+}
+
+input[type="checkbox"], input[type="radio"], label, select, input {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 5px 5px 0;
+}
+
+input[type="checkbox"] {
+	padding: 3px;
+}
+
+/* Main structural divs */
+
+
+.full-width {
+	width: 100%;
+}
+
+.contained-width {
+	margin: 0 auto;
+    max-width: 976px;
+    padding: 0;
+	position: relative;
+}
+
+.centered-text {
+	text-align: center;
+}
+
+.top-padding {
+	padding-top: 10px; 
+	padding-bottom: 10px;
+}
+
+.bbc-nav-container {
+	background: #fff;
+}
+
+.masthead-container {
+	min-height: 105px;
+	background-color: #2f7ab9;
+	border-bottom:  1px solid #6da2ce;
+}
+
+.masthead {
+	min-height: 105px;
+	padding: 0 16px;
+}
+
+.masthead .header {
+	float: left;
+}
+
+.masthead .choices {
+	float: right;
+}
+
+.masthead ul {
+	float: right; 
+	margin-top: 40px;
+}
+
+.masthead li {
+    display: inline-block;
+    min-height: 68px;
+}
+
+.masthead a, .main-search a, .decade-covers a, .issues-years .year-block a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	font-size: 18px;
+}
+
+.gelicon--down, .gelicon--up {
+	font-size: 0.55em;
+}
+ 
+.masthead a, .main-search a {
+	padding: 0 10px 0 15px;
+}
+
+.masthead .issues-main a:hover, .main-search .help a:hover {
+	color: #000;
+}
+
+.masthead h1 a {
+	padding-left: 0;
+}
+
+.tv-toggle, .radio-toggle {
+	padding: 0 0 0 15px;
+}
+
+a.tv-toggle, a.radio-toggle, a.year-toggle, .closed.open-fold a.tv-toggle, .closed.open-fold a.radio-toggle, .closed:hover a.tv-toggle, .closed:hover a.radio-toggle {
+    border-right: 1px solid #6da2ce;
+}
+
+.tv-toggle, .radio-toggle {
+	padding-bottom: 40px;
+}
+
+a.last-close {
+	font-size: 24px;
+	clear: both;
+    display: block;
+    padding: 0 0 1em;
+    text-align: center;
+	border: 0;
+}
+
+.breadcrumbs a.last-close {
+	border-right: 0;
+	padding-bottom: 0;
+}
+
+a.last-close.tv-toggle, a.last-close.radio-toggle, a.last-close.year-toggle {
+    padding-bottom: 0;
+	color: #fff;
+}
+
+a.last-close.year-toggle, .browse-issues a.last-close.year-toggle, .inline-links a.last-close.toggle-choose-year, .breadcrumbs a.last-close.reveal.year {
+ 	border-left: 0 none;
+}
+
+.browse-issues a.last-close.toggle-choose-year, .inline-links a.last-close.toggle-choose-year, .breadcrumbs a.last-close.reveal.year {
+    color: #2f7ab9;
+}
+
+a.last-close:hover {
+	opacity: 0.5;
+}
+
+/*
+.masthead li.closed.open-fold, .masthead li:hover {
+	background: #fff;
+}
+*/
+
+.fa-caret-down, .fa-caret-up {
+	color: #fff;
+	margin: 0 5px;
+}
+
+.breadcrumb-title .fa {
+	color: #2f7ab9;
+}
+
+.year .fa, .month .fa, .channels .fa, a.year .fa {
+	color: #333;
+}
+
+.header a.year .fa {
+	color: #2f7ab9;
+}
+
+.year:hover .fa, .month:hover .fa, .channels:hover .fa, .year:hover .fa, .issues-month-links .year .fa {
+	color: #2f7ab9;
+}
+
+.closed:hover .tv-toggle, .closed:hover .radio-toggle, .closed:hover .year-toggle, .closed:hover .fa, .closed.open-fold .tv-toggle, .closed.open-fold .radio-toggle, .closed.open-fold .year-toggle, .closed.open-fold .fa, .advanced.open-fold .search-toggle, .advanced.open-fold .fa, .advanced .search-toggle:hover, .advanced:hover:hover .fa {
+	color: #000;
+}
+
+/*
+.tv-stations-container, .radio-stations-container {
+	background: #fff;
+} */
+
+.tv-stations ul, .radio-stations ul, .browse-issues ol, .tv-or-radio ul, .breadcrumbs ul, .bcrumb-channels ul, #days ul, .inline-links ul, .issues-decade-links ol, .issues-month-links ol, .issues-breadcrumbs ol, #issues-breadcrumbs ul, ul.search-pages, .order-results ul, .decade-wrapper .decade, .right-col .block ul, .issue-date ul, ol.single-issues {
+	list-style-type: none;
+}
+
+.tv-stations ul, .radio-stations ul {
+	display: inline-block;
+	margin: auto;
+}
+
+.tv-stations li, .radio-stations li, .search-pages li {
+	display: block;
+    float: left;
+    margin: 8px;
+    padding: 0;
+}
+
+img.channel-logo {
+	max-width: 65px;
+	height: auto;
+}
+
+.main-search-container{
+	min-height: 86px;
+	background-color: #2f7ab9;
+}
+
+.tv-stations-wrapper, .radio-stations-wrapper {
+
+}
+
+.tv-stations, .radio-stations, .all-years, .advanced-search-container {
+    padding: 0 0 30px 0;
+	display: none;
+}
+
+.tv-stations, .radio-stations, .all-years {
+	max-width: 976px;
+}
+
+.main-search, .advanced-search {
+	padding: 25px 0 0;
+}
+
+.main-search ul {
+	list-style-type: none;
+}
+
+.main-search .advanced a {
+	border-right: 1px solid #6da2ce;
+}
+
+.main-search li, .main-search input {
+	display: inline-block;
+}
+
+.main-search .search-input {
+	width: 75%;
+	float: left;
+	display: inline-block;
+	white-space: nowrap;
+	position: relative;
+}	
+
+.main-search .search-options {
+	float: right;
+	display: inline-block;
+    text-align: right;
+    width: 25%;
+}
+
+.main-search li.advanced a {
+	padding: 0 15px 0 20px;
+}
+
+.radio-times-search .searchtext, .radio-times-search .searchsubmit {
+	vertical-align: middle;
+}
+
+.radio-times-search .searchtext {
+    border: 0 none;
+    color: #aaa;
+    font-size: 20px;
+    margin: 0;
+    max-height: 40px;
+    padding: 8px 10px;
+    width: 90%;
+}
+
+.gelicon--search {
+    color: #555;
+ 	cursor: pointer;
+	font-size: 1.6em;
+	line-height: 1.4em;
+}
+.btn.btn-search {
+	background: none repeat scroll 0 0 #fff;
+    border: 0 none;
+    cursor: pointer;
+    left: -33px;
+    position: relative;
+    top: 6px;
+}
+
+.btn.btn-reset, .btn.btn-submit {
+	background: none;
+	color: #fff;
+	border: 0;
+	cursor: pointer;
+}
+
+.btn.btn-reset:hover, .btn.btn-submit:hover {
+	color: #000;
+}
+
+.fa-undo {
+	font-size: 1.4em;
+}
+
+.advanced-search-container {
+	background-color: #2f7ab9;
+	padding: 0 0 10px;
+}
+
+fieldset {
+	border: 0;
+	padding: 0.25em 0 0;
+}
+
+.media-channels {
+	padding: 0;
+}
+
+.advanced-search-contributors {
+	padding: 20px 0 10px;
+}
+
+.media-channels ul {
+	list-style-type: none;
+	margin-top: 0;
+}
+
+.advanced-search-options {
+	color: #ffffff;
+    float: left;
+    font-size: 18px;
+    vertical-align: middle;
+    width: auto;
+}
+
+.advanced-search-options.years {
+	margin-right: 90px;
+}
+
+.advanced-search-options.time {
+    float: right;
+    margin-right: 0;
+}
+
+.advanced-search-options.media-channels {
+	float: none;
+}
+
+.options {
+	float: left;
+	display: inline-block;
+	border: 0;
+	width: 100%;
+}
+
+.advanced-search-options.weekdays {
+	clear: both;
+}
+
+.advanced-search-options.reset {
+	float: right;
+}
+
+.advanced-search-options.submit {
+	display: block;
+	text-align: right;
+    margin-top: 0.25em;
+	width: 100%;
+}
+
+.advanced-search-options.reset button, .advanced-search-options.submit button {
+      cursor: pointer;
+      font-size: 18px;
+}
+
+.advanced-search-options.reset button i, .advanced-search-options.submit button i {
+    padding-right: 10px;
+}
+
+.advanced-search-options.submit button.btn-reset i {
+    font-size: 17px;
+}
+
+.advanced-search-options.submit button.btn-submit i {
+    font-size: 24px;
+}
+
+.advanced-search-options.reset button[type="reset"] {
+        float: left;
+		font-size: 24px;
+}
+
+.advanced-search-options.submit button[type="submit"] {
+    background: none repeat scroll 0 0 #dcdcdc;
+    color: #2f7ab9;
+    float: right;
+    padding: 5px 64px 10px;
+	border: 1px solid #fff;
+}
+
+.advanced-search-options.submit button[type="submit"]:hover {
+	background: #fff;
+}
+
+.advanced-search-options.submit button[type="submit"]:active {
+	opacity: 0.5;
+}
+
+.advanced-search-options {
+	margin-bottom: 1.5em;
+}
+
+.advanced-search-options.media-channels {
+    width: 95%;
+	margin: 0;
+}
+
+.advanced-search-options.weekdays {
+	width: auto;
+	margin-right: 2em;
+}
+
+legend, .advanced-search-options.media-channels label {
+	font-size: 20px;
+    font-weight: normal;
+    margin: 0 1em 0 0;
+}
+
+.weekdays legend {
+	float: left;
+}
+
+.weekdays legend, .advanced-search-options.weekdays label, .advanced-search-options.contributors label {
+	    line-height: 1.6em;
+}
+
+.advanced-search-options.media-channels label, .advanced-search-options.weekdays span {
+	white-space: nowrap;
+}
+
+label {
+	font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.advanced-search-options.weekdays label, .advanced-search-options.contributors label {
+    margin: 0 1em 0 0;
+	float: left;
+}
+
+.advanced-search-options.weekdays span, .advanced-search-options.reset label, .advanced-search-options.contributors span {
+	font-size: 16px;
+	
+}
+
+.media-channels .advanced-search-options {
+    float: left;
+    margin-right: 4%;
+    width: 18%;
+}
+
+.media-channels .advanced-search-options.narrow {
+    float: left;
+    margin-right: 3%;
+    width: 14%;
+}
+
+.advanced-search-options.last {
+	margin-right: 0;
+	float: right;
+}
+
+.media-channels li {
+    display: inline;
+    margin: 0 4em 1em 0;
+}
+
+.search-results-orderby h5, .search-results-orderby ul, .order-results, .order-results li  {
+	display: inline-block;	
+}
+
+input.date-range {
+    /* height: 38px; */
+    padding: 5px;
+    width: 80px;
+    color: #333;
+}
+
+.btn.selectpicker  {
+	border-radius: 0;
+}
+
+.search-results-orderby {
+	margin-top: 20px;
+}
+
+.order-results li  {
+	border-right: 1px solid #ccc;
+}
+
+.order-results li:last-of-type  {
+	border-right: 0;
+}
+
+.order-results {
+	width: 50%;
+	margin-left: 20px;	
+}
+
+
+.order-results a {
+	color: #868686;
+	text-decoration: none;
+	margin: 0 1em 0 0.5em;
+}
+
+.order-results .current a, .order-results a:hover {
+	color: #333;
+}
+
+.no-results .order-results {
+	display: none;
+}
+
+
+.small {
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.small {
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.bbc-nav img, .bbc-footer img {
+	width: 100%;
+}
+
+.content-area {
+	text-align: center;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+.content-area.left-align {
+	text-align: left;
+}
+
+.align-left em.comment {
+	color: #85b200;
+}
+
+.search-results.content-area {
+	padding-top: 0;
+}
+
+.search-results-services img {
+    margin: 8px 5px;
+    opacity: 0.5;
+}
+
+.search-results-services a {
+    display: inline-block;
+}
+
+.search-results-services img.current, .search-results-services img:hover {
+    opacity: 1;
+}
+
+.numbers.content-area {
+    padding-bottom: 60px;
+}
+
+.content-area a, .search-results-services a, .programme-details .right-col p a {
+	color: #2f7ab9;
+	text-decoration: none;
+}
+
+.content-area a.reading-text {
+	color: #333;
+}
+
+.content-area a:hover, .search-results-services a:hover {
+	text-decoration: underline
+}
+
+.full-width-photo {
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+}
+
+.full-width-photo.montage {
+	margin-top: 40px;
+}
+
+.full-width-photo img {
+	width: 100%;
+	height: auto;
+}
+
+.bgimage {
+	background-position: center center;
+    background-repeat: no-repeat;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.bbc-footer-container {
+	background-color: #4c4c4c;
+}
+
+.about-project {
+	margin-bottom: 20px;
+}
+
+/* Headers */
+/* Headers */
+#orb-modules h1, #orb-modules h2, #orb-modules h3, #orb-modules h4, #orb-modules h5, #orb-modules h6, #orb-modules h7 {
+	font-weight: normal;
+	color: #333333;
+}
+
+#orb-modules h1 {
+	font-size: 42px;
+	line-height: 50px;
+	margin-bottom: 0.75em;
+    margin-top: 0.5em;
+}
+
+.listings-content h1 {
+	font-size: 36px;
+}
+
+.programme-details h1 {
+	font-size: 36px;
+	margin: 0;
+}
+
+.programme-details h2 {
+	font-size: 26px;
+}
+
+.programme-content p.leftalign {
+    display: inline-block;
+    float: left;
+    max-width: 75%;
+    padding-top: 10px;
+}
+
+.programme-details p a {
+	text-decoration: none;
+	color: #000;
+}
+
+.programme-details p a:hover {
+	color: #2f7ab9;
+}
+
+.programme-details p a .time  {
+	color: #999;
+	border-left: 1px solid #999;
+	padding-left: 10px;
+	margin-left: 10px;
+}
+
+.programme-details h2 a:hover, .programme-details h2 a:hover .time {
+	text-decoration: underline;
+	color: #2f7ab9;
+}
+
+h2 {
+	font-size: 36px;
+	line-height: 40px;
+	margin-bottom: 0.5em;
+}
+
+.text-page.about h2, .text-page.faqs h2 {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0.25em 0 0.25em;
+}
+
+h3 {
+	font-size: 32px;
+	line-height: 40px;
+	margin: 0 0 0.5em 0;
+}
+
+h3 a {
+	color: #777;
+	text-decoration: none;
+}
+
+.right-col h2 {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0.25em 0 0.25em;
+}
+
+h4 {
+	font-size: 26px;
+	margin-bottom: 0.25em;
+}
+
+.align-left h4 {
+	font-size: 20px;
+	margin: 0.5em 0;
+}
+
+.single-issue.block h4 {
+	font-size: 20px;
+	margin-bottom: 0;
+}
+
+.single-issue.block h5 {
+	font-size: 18px;
+	margin: 0;
+}
+
+h5 {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0.25em 0 0.25em;
+}
+
+h6 {
+	font-size: 19px;
+}
+
+.header a {
+        padding: 0;
+}
+
+.header .title {
+	color: #fff;
+	width: auto; 
+	display: inline-block; 
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 105px;
+	margin: 0;
+	padding: 0;
+}
+
+.header .beta {
+    bottom: 0.7em;
+    color: #fff;
+    font-size: 0.7em;
+    position: relative;
+}
+
+.header .description {
+	color: #d5e4f1;
+	width: auto; 
+	display: inline-block; 
+	font-size: 22px;
+	line-height: 105px;
+	margin: 0;
+        padding-left: 20px;
+}
+
+p {
+    margin: 0 0 1.4em;
+}
+
+.centered-text h1, .centered-text h2, .centered-text p {
+	max-width: 68%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.contained-width.text-page a {
+	color: #2f7ab9;
+	text-decoration: none;
+}
+
+.contained-width.text-page a:hover {
+	text-decoration: underline;
+}
+
+.text-page ul {
+	margin: 0 0 1.4em 1.2em;
+}
+
+.text-page ul ul {
+	margin: 0 0 0em 1.2em;
+}
+
+.text-page li {
+	margin: 0 0 0.25em 0;
+}
+
+
+/* buttons */
+
+.download-pdf-btn a, .public-view-btn a, .edit-btn a, .save-btn a, .cancel-btn a {
+	color: #ffffff;
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 5px 10px;
+}
+
+.blue-text-btn {
+    background-color: #2F7AB9;
+    border: 0 none;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 140px;
+}
+
+.right-col .blue-text-btn {
+	width: 100%;
+}
+
+.blue-text-btn a {
+    color: #fff;
+    display: block;
+    padding: 8px 10px 10px;
+    text-decoration: none;
+}
+
+.download-pdf-btn, .public-view-btn {
+	border: 0 none;
+    color: #ffffff;
+    margin: 0.5em 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 260px;
+	line-height: 1.4em;
+	padding: 0;
+}
+
+.download-pdf-btn {
+    background-color: #2f7ab9;
+}
+
+.edit-btn a, .save-btn a, .cancel-btn a {
+  display: block;
+}
+
+.public-view-btn {
+    background-color: #333333;
+}
+
+.ghost-btn {
+    background-color: #FFFFFF;
+    border: 2px solid #DCDCDC;
+    color: #DCDCDC;
+    margin: 20px auto;
+    text-align: center;
+    vertical-align: middle;
+    width: 180px;
+}
+
+.browse-issues .ghost-btn, .browse-issues .ghost-btn a, .browse-issues .ghost-btn .fa  {
+	border: 0;
+    color: #333;
+	font-size: 20px;
+}
+
+.browse-issues .ghost-btn {
+	margin-bottom: 30px;
+	width: 200px;
+}
+
+.ghost-btn .fa {
+	color: #DCDCDC;
+}
+
+.ghost-btn a {
+	color: #DCDCDC;
+	display: block;
+}
+
+.browse-issues-btn {
+    background-color: #dcdcdc;
+    border: 0 none;
+    color: #333333;
+    margin-top: 1em;
+    padding: 8px 10px 10px;
+    text-align: center;
+	cursor: pointer;
+    vertical-align: middle;
+    width: 180px;
+}
+
+.browse-issues-btn a {
+	color: #333333;
+}
+
+.browse-issues-btn a, .ghost-btn a, .download-pdf-btn a, .public-view-btn a  {
+	text-decoration: none;
+}
+
+.edit-btn, .save-btn, .cancel-btn, input.new-info {
+    background-color: #85b200;
+    border: 0 none;
+    color: #ffffff;
+	cursor: pointer;
+    padding: 2px 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 140px;
+	margin-bottom: 10px;
+}
+
+.edit-btn:hover, .save-btn:hover, .cancel-btn:hover, input.new-info:hover, .browse-issues-btn:hover {
+	opacity: 0.5;
+}
+
+.edit-btn:active, .save-btn:active, .cancel-btn:active, input.new-info:active, .browse-issues-btn:active {
+	opacity: 1;
+}
+
+.new-info {
+	padding: 10px;
+	margin: 1em 0 1em 10px;
+	font-size: 16px;
+}
+
+.top.new-info {
+	margin: 0 0 1em 10px;
+}
+
+.tell-us-more {
+	width: 100%;
+	height: 6em;
+}
+
+hr {
+	display: block; 
+	height: 1px;
+    border: 0; 
+	border-top: 1px solid #ddd;
+	margin: 1em 0;
+}
+
+hr.clearboth {
+	clear: both;
+}
+
+hr.no-bot-margin {
+	margin-bottom: 0;
+}
+
+hr.section {
+	clear: both;
+	margin: 0;
+	height:54px;
+	background: url(/images/drop-shadow.png) repeat-x;
+	border: 0; 
+}
+
+.right-col hr {
+	margin: 1.5em 0 1.5em 25px;
+}
+
+.choose-year {
+    display: inline-block;
+    border: 2px solid #dcdcdc;
+    position: relative;
+}
+
+.choose-year-wrapper {
+    display: none;
+}
+
+.decade.sub-menu {
+	float: left;
+	margin: 0 0 0.5em; 
+}
+
+.decade-wrapper {
+	position: relative;
+	display: inline-block;
+}
+
+.decade li {
+	text-align: center;
+}
+
+.all-years .decade li {
+	color: #fff;
+}
+
+.decade h3 {
+    font-size: 1.4em;
+    font-weight: normal;
+    padding: 5px 20px;
+	text-align: center;
+}
+
+.choose-year-wrapper h3 {
+	color: #333
+}
+
+#orb-modules .all-years h3 {
+	color: #d5e4f1;
+}
+
+.decade .blank-year:after {
+    content: " - ";
+    display: block;
+    text-align: center;
+}
+
+.decade li, .breadcrumbs .decade li.year {
+	border-right: 1px solid #ddd;
+    display: block;
+    min-height: 40px;
+    min-width: 40px;
+    padding: 5px 15px;
+}
+
+.decade.last li {
+	border-right: 0;
+}
+
+.decade a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+
+.all-years .decade a, .all-years .decade .blank-year {
+	color: #fff;
+}
+
+.choose-year-wrapper .decade a, .inline-links .decade-wrapper .year a  {
+	color: #333;
+}
+
+.all-years .decade .current a, .all-years .decade a:hover {
+	background: #fff;
+	color: #333;
+}
+
+.choose-year-wrapper .decade .current a, .choose-year-wrapper .decade a:hover {
+	background: #2f7ab9;
+	color: #fff;
+	text-decoration: none;
+}
+
+.all-years .decade a:hover, .choose-year-wrapper .decade a:hover, .breadcrumbs .decade.sub-menu a:hover {
+	opacity: 0.5;
+}
+
+.decade-covers {
+	margin: 20px auto;
+    max-width: 974px;
+    text-align: left;
+}
+
+.issue-block {
+	background: none repeat scroll 0 0 #333;
+    display: inline-block;
+    height: auto;
+    margin: 4px 3px 8px;
+    padding: 2px;
+    position: relative;
+    text-align: center;
+    width: 94px;
+}
+
+.issue-block img {
+    width: 100%;
+}
+
+.issue-block span {
+	display: block;
+    float: left;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 59%, rgba(0,0,0,0.65) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(59%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.65) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.65) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.65) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.65) 100%);
+}
+
+.issue-block a {
+	display: block;
+    max-height: 237px;
+    padding-top: 95px;
+	padding-bottom: 0px;
+	color: #fff;
+}
+
+.issue-block span:hover {
+	background: none;
+}
+
+.tv-or-radio ul {
+	margin-bottom: 50px;
+}
+
+.tv-or-radio h3 a {
+	margin: 0 20px;
+    padding: 0 15px 25px;
+}
+
+.tv-channels {
+    margin-left: 15px;
+}
+
+.tv-or-radio .tv-channels:after {
+	content: " |";
+	font-size: 32px;
+	color: #dddddd;
+}
+
+.choose-tv-channels, .choose-radio-stations {
+	display: inline-block;
+    max-width: 800px;
+	margin: 0 auto;
+}
+
+.choose-tv-channels li, .choose-radio-stations li {
+	float: left;
+	display: block;
+    margin: 16px;
+    padding: 0;
+}
+
+.tv-or-radio h3 a.current, .tv-or-radio h3 a:hover {
+	color: #333;
+}
+
+/* number blocks */
+.num-block, .sidebar-num-block {
+    max-width: 240px;
+}
+
+.right-col .num-block {
+    margin: 20px 0;
+}
+
+.num-block {
+    display: inline-block;
+	margin-top: 20px;
+}
+
+.sidebar-num-block {
+    float: left;
+}
+
+.num-1, .sidebar-num-1 {
+    color: #777777;
+    font-size: 42px;
+}
+
+.num-2, .sidebar-num-2 {
+    color: #777777;
+    font-size: 40px;
+}
+
+.num-3, .sidebar-num-3 {
+    color: #777777;
+    font-size: 18px;
+    height: auto;
+    max-width: 240px;
+}
+
+/* breadcrumb styles */
+
+.breadcrumbs {
+	min-height: 50px;
+	margin-top: 10px;
+}
+
+.breadcrumbs ul {
+	display: block;
+}
+
+.breadcrumbs li {
+	float: left;
+	min-height: 30px;
+	position: relative;	
+	padding: 5px 20px;
+}
+
+.breadcrumbs li.breadcrumb-title {
+	padding: 5px 20px 5px 0;
+}
+
+.breadcrumbs .decade li {
+	float: none;
+	text-align: center;
+}
+
+.breadcrumbs a {
+	color: #333;
+    font-size: 24px;
+    text-decoration: none;
+    vertical-align: middle;
+	display: block;
+	width: 100%;
+	border-right: 1px solid #ddd;
+    padding-right: 15px;
+}
+
+.breadcrumbs a, .issues-breadcrumbs .breadcrumb-title {
+	border-right: 1px solid #ddd;
+}
+
+
+.breadcrumbs a.last, .breadcrumbs .decade a {
+	border-right: none;
+}
+
+.breadcrumbs .breadcrumb-title a, .issues-breadcrumbs .breadcrumb-title {
+    color: #2f7ab9;
+	font-size: 30px;
+	padding-left: 0;
+}
+
+.breadcrumb-title a .arrow {
+	font-size: 26px;
+}
+
+.breadcrumbs .sub-menu-container, .choose-year-wrapper {
+	display: none;
+	clear: both;
+}
+
+.breadcrumbs .sub-menu {
+	display: inline-block;
+}
+
+.breadcrumbs li.list-header h5 {
+	line-height: 1em;
+    margin: 0;
+}
+
+.breadcrumbs .sub-menu a, .decade a, .inline-links .decade-wrapper .year a  {
+	font-size: 18px;
+	border-right: 0;
+}
+
+.breadcrumbs .breadcrumb-title .sub-menu a {
+    font-weight: normal;
+    color: #333;
+	font-size: 18px;
+}
+
+.breadcrumbs .sub-menu li, .breadcrumbs .sub-menu a, .decade a {
+    display: block;
+    float: none;
+}
+
+.breadcrumbs .sub-menu a, .decade a, .inline-links .sub-menu a {
+    padding: 0 5px;
+	width: auto;
+}
+
+.breadcrumbs .sub-menu-container, .breadcrumbs .choose-year-wrapper, .issue.choose-year-wrapper {
+    display: none;
+    position: absolute;
+    background: #fff;
+    padding: 20px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #bcbcbc;
+    min-width: 120px;
+	width: auto;
+	z-index: 1000;
+}
+
+.breadcrumbs .sub-menu-container.radio {
+    position: absolute;
+    top: 40px;
+    width: auto;
+}
+
+.breadcrumbs .sub-menu-container.tv {
+    position: absolute;
+    top: 40px;
+    left: 105px;
+	width: auto;
+}
+
+.breadcrumbs .sub-menu-container.radio li {
+	float: left;
+	width: 200px;
+	padding: 5px 20px;
+}
+
+.breadcrumbs .sub-menu-container .decade-wrapper {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.breadcrumbs .choose-year-wrapper, .issue.choose-year-wrapper {
+	padding: 20px;
+    text-align: center;
+    width: auto;
+	margin: 0 auto 20px;
+	left: 0;
+	top: 60px;
+}
+
+.reveal:hover {
+  text-decoration: none !important;
+}
+
+.reveal .close {
+  display: none;
+}
+
+.reveal .open {
+  display: inline;
+}
+
+.open-fold .reveal .close, .issues-month-links .open-fold .close {
+  display: inline;
+}
+
+.open-fold .reveal .open {
+  display: none;
+}
+
+.current:after, .accessibility-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.current:after {
+  content: "(current)";
+}
+
+.closed .hide, .closed.open-fold .show, .switcher-breadcrumbs .open-fold .choose, .switcher-breadcrumbs .close-choose, .issues-month-links .open-fold .choose, .issues-month-links .close, .issues-month-links .close-choose, .issues-month-links .open-fold .choose  {
+  display: none;
+}
+
+.closed.open-fold .hide, .closed .show, .switcher-breadcrumbs .choose, .switcher-breadcrumbs .open-fold .close-choose, .issues-month-links .choose, .issues-month-links .open-fold .close-choose {
+  display: block;
+}
+
+
+.browse-issues .decade-wrapper, .issues-month-links .decade-wrapper {
+	border: 1px solid #bcbcbc;
+    margin: 0 auto;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.browse-issues .decade-wrapper {
+	margin-bottom: 1em;
+}
+
+.issues-month-links .decade-wrapper {
+	clear: both;
+    display: inline-block;
+    margin-top: 1em;
+    position: relative;
+}
+
+.issues-breadcrumbs.breadcrumbs li.year .choose-year-wrapper{
+	left: -70px;
+}
+
+.breadcrumbs li:hover a.chosen, .breadcrumbs .sub-menu li.current a, .issues-decade-links a:hover, .breadcrumbs .sub-menu.bcrumb-channels a:hover, .breadcrumbs .sub-menu.bcrumb-month a:hover  {
+	color: #2f7ab9!important;
+}	
+
+.breadcrumbs .choose-year-wrapper .sub-menu li.current a, .breadcrumbs .choose-year-wrapper .sub-menu a:hover {
+	background: #2f7ab9;
+	color: #fff!important;
+	padding-right: 5px;
+}
+
+.breadcrumbs .sub-menu {
+	text-align: left;
+}
+
+.breadcrumbs .sub-menu li.year, .inline-links .sub-menu li.year {
+    border-right: 1px solid #dddddd;
+    min-height: 40px;
+    padding: 5px 15px;
+	text-align: center;
+}
+
+.breadcrumbs .sub-menu.last li.year, .inline-links .sub-menu.last li.year, .issues-decade-links a:last-of-type, .decade:last-of-type li, .inline-links .sub-menu:last-of-type li.year, .breadcrumbs .sub-menu:last-of-type li.year  { 
+	border-right: 0;
+}
+
+/* #days & issues  grid */
+.day-week-slider ul {
+	display: inline-block;
+	display: table;
+	margin: 0 auto;
+	font-size: 0;
+	width: 100%;
+}
+.day-week-slider li {
+	display: inline-block;
+	min-width: auto;
+	text-align: center;
+	font-size: 14px;
+	display: table-cell;
+	width: 77px;
+}
+
+.day-week-slider li.missing {
+    background: none repeat scroll 0 0 #eee;
+    font-size: 18px;
+}
+
+.day-week-slider li * {
+    background: #eee;
+    color: #777;
+    display: block;
+    font-weight: bold;
+    line-height: 1.6em;
+    padding: 8px 0;
+}
+
+.day-week-slider li a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.day-week-slider li a span {
+	font-weight: normal;
+	background: inherit;
+}
+
+.day-week-slider li.current a, .day-week-slider li.current a span, .day-week-slider li a:hover {
+	background: #222;
+	color: #fff;
+}	
+
+.day-week-slider li a:hover {
+	opacity: 0.7;
+}	
+
+.inline-links {
+	margin-top: 10px;
+}
+
+.inline-links li {
+    float: left;
+    padding: 5px 1em 5px 0;
+}
+
+.inline-links .decade li {
+    float: none;
+}
+
+.inline-links .first {
+	padding-left: 0;
+}	
+
+.issues-month-links .heading, .issues-decade-links .heading, .issues-breadcrumbs .heading {
+	float: left;
+}
+
+#orb-modules .inline-links .title, #orb-modules .issues-month-links h1, .issues-month-links h1 a, #orb-modules .issues-decade-links h1, .issues-breadcrumbs .heading span, .issues-decade-links h1 a {
+	color: #2f7ab9;
+    font-size: 24px;
+    line-height: 1.4em;
+	padding-left: 0;
+	border-left: 0;
+	margin: 0;
+}
+
+.issues-month-links ol, .issues-decade-links ol  {
+	float: left;
+}
+
+.issues-decade-links ol  {
+	margin-left: 0.75em;
+}
+
+.inline-links a, .inline-links .missing {
+    border-left: 1px solid #ddd;
+    color: #333;
+    display: block;
+    font-size: 24px;
+    padding-left: 0.5em;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.inline-links .missing {
+    color: #aaa;
+}
+
+.inline-links .first a {
+	border-left: 0;
+	padding-left: 0;
+}
+
+.inline-links .decade a {
+	border-left: 0;
+}
+
+.inline-links .year a, .inline-links.faq-about a {
+	color: #2f7ab9;
+}
+
+.inline-links.faq-about .current a {
+	color: #333;
+}
+
+
+.inline-links a:hover {
+	color: #2f7ab9;
+}
+
+.issues-years .year-block {
+	display: inline-block;
+    width: 230px;
+	background: #333;
+	height: 295px;
+    margin: 4px 5px 8px;
+    text-align: center;
+	position:relative;
+	vertical-align: top;
+}
+
+.issues-years .year-block a {
+    display: block;
+   	max-height: 300px;
+	width: 100%;
+    padding-bottom: 30px;
+    padding-top: 240px;
+    color: #fff;
+}
+
+.issues-years .year-block span {
+	display: block;
+	height: 100%;
+	width: 100%;
+	float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 59%, rgba(0,0,0,0.65) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(59%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.65) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.65) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.65) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 59%,rgba(0,0,0,0.65) 100%);
+}
+
+.year-block span:hover {
+	background: none;
+}
+
+.decade-block, .month-issues {
+	padding: 10px 0 20px;
+}
+
+.decade-block.first {
+	padding-top: 0px;
+}
+
+.greybg {
+	background: #f7f7f5;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.single-issues li {
+	display: inline-block;
+    width: 230px;
+    margin: 4px 5px 2em;
+	position:relative;
+	vertical-align: top;
+}
+
+.single-issues span {
+    display: block;
+    line-height: 1.4;
+}
+
+.single-issues .issue-number {
+    font-size: 20px;
+}
+
+.single-issues .issue-date, .issue-detail .issue-date {
+    font-size: 18px;
+	margin: 0;
+}
+
+.single-issues .issue-description, .issue-detail .issue-description, .issue-detail .schedule-info {
+    font-size: 16px;
+}
+
+.single-issues a {
+	color: #333;
+	text-decoration: none;
+}
+
+.single-issues a:hover {
+	color: #2f7ab9;
+	text-decoration: none;
+}
+
+.issues-year .month-issues a {
+	color: #333; 
+	text-decoration: none;
+}
+
+.issues-year .month-issues a:hover {
+	color: #2f7ab9; 
+	text-decoration: underline;
+}
+
+table.month-issues {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.month-issues th, .month-issues td {
+	vertical-align: top;	
+	padding: 2px;
+	border-bottom: 1px solid #ddd;
+}
+
+.month-issues th, .month-issues .month  {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.month-issues .month  {
+	width: 18%;
+}
+
+.external .month-issues .issue-number, .external .month-issues .issue-date, .external .month-issues .issue-description, .external .month-issues .issue-volume, .pseudo_external .month-issues .issue-number, .pseudo_external .month-issues .issue-date, .pseudo_external .month-issues .issue-description, .pseudo_external .month-issues .issue-volume {
+	display: inline-block;
+	padding: 4px 0;
+	vertical-align: top;
+}
+
+.external .month-issues .issue-number, .pseudo_external .month-issues .issue-number {
+	padding-right: 2%;
+    width: 15%;
+}
+
+.external .month-issues .issue-date, .pseudo_external .month-issues .issue-date {
+    padding-right: 2%;
+    width: 34%;
+}
+
+.external .month-issues .issue-description, .pseudo_external .month-issues .issue-description {
+	width: 35%;
+}
+
+.external .month-issues .issue-volume, .pseudo_external  .month-issues .issue-volume {
+	width: 10%;
+	text-align: right;
+}
+
+.month-issues p, .issues-years p {
+	text-align: center;
+	margin: 0;
+}
+
+.issues-years p {
+	margin-top: 20px;
+}
+
+.issues-list {
+	margin: 0 auto;
+}	
+
+.month-issues p a, .issues-years p a, p.issues-list a {
+	color: #2f7ab9;
+	text-decoration: none;
+}
+
+p.issues-list {
+	text-align: center;
+}
+
+.month-issues p a:hover, .issues-years p a:hover, p.issues-list a:hover {
+	color: #2f7ab9;
+	text-decoration: underline;
+}
+
+
+
+/* content columns */
+.primary-content, .right-col {
+	float: left; 
+	text-align: left;
+}
+
+.primary-content {
+	width: 64%;
+	margin: 0 5% 0 0;
+}
+
+.right-col {
+	width: 31%;
+	background: url(/images/r-col-bg.jpg) repeat-y; 
+	padding: 0;
+}
+
+.programme-details .primary-content, .programme-details .right-col {
+	padding-top: 0;
+}
+
+.right-col.topfade {
+	width: 100%;
+	height: 40px;
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(17%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 17%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 17%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 17%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 17%,rgba(255,255,255,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.bottomfade {
+	width: 100%;
+	height: 60px;
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 88%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(88%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 88%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 88%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 88%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 88%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.listing, .result {
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    padding: 1em 0 1em 4.5em;
+    position: relative;
+}
+
+.result {
+    padding-left: 125px;
+	min-height: 130px;
+}
+
+.result:last-of-type {
+	border-bottom: 0;
+}
+
+.listing h2, .result h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 1.2em;
+}
+
+.listing h3 {
+    font-size: 1.3em;
+    font-weight: normal;
+    line-height: 1.4em;
+	margin-top: 1em;
+}
+
+.listing time, .result .service-icon, .result .date-time {
+    left: 0;
+    position: absolute;
+}
+
+.result .date-time {
+	float: left;
+	font-size: 16px;
+	line-height: 1.4em;
+	text-align: right;
+	width: 105px;
+	
+}
+
+.result .date-time a {
+	margin-top: 65px;
+	display: inline-block;
+}
+
+.listing h2 span {
+    left: -999em;
+    position: absolute;
+}
+
+.listing a {
+    color: #2f7ab9;
+    text-decoration: none;
+}
+
+.result img.service-icon {
+    width: 105px;
+	height: 60px;
+}
+
+
+dl .title, dl .list-time {
+    display: block;
+    font-size: 24px;
+    line-height: 1.4em;
+    margin: 0.5em 0;
+    padding: 0;
+}
+
+/*dl h3 a:hover {
+	color: #2f7ab9;
+} 
+
+*/
+
+dl h4 {
+    font-size: 21px;
+    margin: 1em 0 0.62em;
+    padding: 0;
+}
+
+
+dt {
+	float: left; 
+	clear: left; 
+	padding: 10px 0 0.5em 0;
+	border-top: 1px solid #ddd;
+	font-weight: normal;
+} 
+
+dt.first {
+	border-top: 0;
+}
+
+dt:first-of-type {
+	border-top: 0;
+}
+
+dd:first-of-type {
+	border-top: 0;
+}
+
+.listings-content dt {
+	width: 60px; 
+}
+
+.text-page dl {
+	margin-bottom: 1.4em;
+}
+
+.text-page dt {
+	float: left; 
+	width: 160px; 
+	padding: 10px 0 0.5em 0;
+	font-weight: bold;
+}
+
+dd { 
+	padding: 10px 0 0.5em 20px; 
+	border-top: 1px solid #ddd;
+}
+
+.listings-content dd {
+	margin: 0 0 0 60px; 
+}
+
+.text-page dd {
+	margin: 0 0 0 160px; 
+	padding: 10px 0 0.5em 20px;
+}
+
+dd.first {
+	border-top: 0;
+}
+
+.search-results mark {
+  background: #a6daff;
+}
+
+ul.search-pages li {
+	display: inline;
+	font-size: 0.8em;
+	color: #878787;
+}
+
+ul.search-pages li.pagesnav {
+    font-size: 1.3em;
+    padding-top: 6px;
+}
+
+ul.search-pages li.current .fa-stack, ul.search-pages .fa-question-circle, ul.search-pages .fa-stack:hover, .fa-question-circle:hover {
+    color: #2f7ab9;
+}
+
+ul.search-pages .fa-stack, .fa-question-circle {
+    color: #fff;
+}
+
+ul.search-pages .fa-inverse {
+    color: #878787;
+}
+
+ul.search-pages li.current .fa-inverse, ul.search-pages .fa-inverse:hover {
+    color: #fff;
+}
+
+.edit-btn.inline, .save-btn.inline, .cancel-btn.inline {
+    float: right;
+}
+
+.edit-btn.inline {
+    display: inline-block;
+}
+
+.edit-only {
+    display: none;
+}
+
+.programme-content .title {
+	float: left;
+}
+
+/*.edit-btn.inline, .save-btn.inline, */
+.programme-content .title {
+	display: inline-block;
+	clear: both
+}
+
+.programme-content .fa-stack.fa-lg {
+	color: #fff;
+}
+
+.alert-bar-grey .fa-info {
+	color: #333;
+}
+
+.programme-content .trow {
+	display: block;
+}
+
+.programme-content .tcel {
+	display:table-cell;
+	width: 50%;
+}
+
+.programme-content .edit-block {
+	margin-bottom: 40px;
+	padding: 10px;
+	border: 3px solid #ffffff;
+}
+
+.edit-detail.active {
+        background-color: rgba(255, 255, 0, 0.1);
+}
+
+.edit-block.active {
+	border: 3px solid #cecece;
+	clear: both;
+}
+
+.programme-content .edit-block:focus {
+	border: 3px solid #85b200;
+}
+
+.programme-content .edit-block {
+	/* width: 96%; */
+}
+
+.listings .alert-bar-yel.wide {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.right-col .block {
+	margin: 0 10px 20px 25px;
+	position: relative;
+}
+
+.right-col .block ul {
+	margin-bottom: 1em;
+}
+
+.right-col .block.list ul {
+	list-style-type: disc;
+	margin-left: 1.2em;
+}
+
+.right-col .block img.issue-cover {
+	width: 100%;
+	max-width: 260px;
+	height: auto;
+}
+
+
+/* single issue page styles */
+
+#orb-modules .issue-detail h1 {
+	text-transform: uppercase;
+	margin: 0;
+	font-size: 32px;
+}
+
+.issue-detail img {
+	display: inline-block;
+    left: 0;
+    margin: 10px 30px 40px 0;
+    position: absolute;
+    vertical-align: bottom;
+    width: 260px;
+}
+
+.issue-detail p {
+    margin: 1em 0;
+}
+
+.issue-detail .fa-exclamation-triangle {
+	color: #ffca00;
+}
+
+.issue-detail .text {
+    display: inline-block;
+    left: 280px;
+    margin: 50px 0 0;
+    max-width: 696px;
+    position: relative;
+    vertical-align: bottom;
+}
+
+.external .issue-detail .text, .pseudo_external .issue-detail .text  {
+	left: 0;
+	display: block;
+	margin: 20px 0 0;
+}
+
+.issue-date h2 {
+	font-size: 24px;
+}
+
+.issue-date h2 span.pages {
+	font-size: 16px;
+}
+
+.browse-issues h5 {
+	font-size: 20px;
+}
+
+.issue-date h6 {
+	color: #999999;
+	margin-left: 0.5em;
+}
+
+.issues-list .issue-date {
+    margin: 0 0 1em;
+}
+
+.issue-date .station {
+    border-top: 1px solid #ddd;
+    float: left;
+    padding: 1em 0;
+    width: 25%;
+}
+
+.issue-date .col {
+	width: 220px;
+	display: inline-block;
+	margin-right: 40px;
+	vertical-align: top;
+}
+
+.issue-date .col :first-child {
+	border-top: 0;
+	
+}
+
+.issue-date .station a {
+	color: #666666;
+	margin-right: 1em;
+	text-decoration: none;
+}
+
+.issue-date .station a:hover {
+	color: #2f7ab9;
+	text-decoration: none;
+}
+
+.align-center {
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+.align-left {
+	float: left;
+}
+
+.align-right {
+	float: right; 
+}
+
+.welcome .align-left, .about-project .align-left, .text-page .align-left {
+	max-width: 60%;
+}
+
+.welcome .align-right, .about-project .align-right {
+	max-width: 40%;
+}
+
+.welcome .align-right img, .about-project .align-right img {
+	/* width: 100%; */
+}
+
+.welcome .align-right img {
+	margin-top: 40px;
+}
+
+.about .align-right img {
+	margin-top: 100px;
+}
+
+.right-col img.rh-logo {
+	height: auto;
+    margin-bottom: 0.25em;
+    max-width: 85px;
+}
+
+.fa-stack {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    position: relative;
+    vertical-align: middle;
+    width: 2em;
+}
+
+.block .fa-pencil{
+	color: #85b200;
+	font-size: 2em;
+}
+
+.gelicon--link, .gelicon--help, .block .fa-flask {
+	color: #2f7ab9;
+}
+
+.gelicon--link {
+	font-size: 1.8em;
+}
+
+.gelicon--help {
+	font-size: 2em;
+}
+
+.block .fa-flask {
+	font-size: 1.8em;
+}
+
+.right-col .gelicon--alert {
+	color: #ffca00;
+    display: block;
+    font-size: 2em;
+    margin: 0.5em 0 0.25em;
+}
+
+/* Alerts */
+.alert-bar-yel {
+	text-align: center;
+	border: 0;
+	color: #ffffff;
+	background-color: #ffca00;
+	vertical-align: middle;
+	padding: 8px 10px 10px 10px;
+	margin-top: 0px;
+        margin-bottom: 1.5em;
+}
+
+.programme-content .alert-bar-yel {
+	text-align: left;
+	color: #000;
+}
+
+.alert-bar-grn {
+	text-align: center;
+	width: 550px;
+	border: 0;
+	color: #ffffff;
+	background-color: #85b200;
+	vertical-align: middle;
+	padding: 8px 10px 10px 10px;
+	margin-top:20px;
+}
+
+#style-guide-alert {
+	display: none;
+}
+
+.alert-bar-grey {
+	background-color: #dcdcdc;
+    border: 0 none;
+    color: #333333;
+    margin: 20px 0;
+    padding: 8px 10px 10px;
+    text-align: left;
+    vertical-align: middle;
+    width: auto;
+}
+
+.alert-bar-grey span.message {
+	display: inline-block;
+	width: 85%;
+	vertical-align: top; 
+}
+
+.alert-bar-grey .gelicon--no {
+	margin: 0 3px; 
+	float: right; 
+}
+
+.edit-extras {
+    display: none;
+}
+
+.external-bar, .internal-bar {
+  color: #ddd;
+  text-align: center;
+  padding: 0.2em 0;
+  font-size: 18px;
+}
+
+.external-bar {
+  background: #c41;
+}
+
+.internal-bar {
+  background: #482;
+}
+
+.external-bar a, .internal-bar a {
+  color: #fff;
+}
+
+#message-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  line-height: 1.2em;
+  margin-right: -50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  color: #fff;
+  width: auto;
+  z-index: 1000;
+  padding: 1em 2em;
+  font-weight: normal;
+  font-size: 36px;
+}
+
+#message-popup.ok {
+  color: #85b200;
+}
+
+#message-popup.error {
+  color: #ffca00;
+}
+
+#terms-and-conditions, #it-is-pretty-bad {
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  padding: 2em;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+#terms-and-conditions button {
+    margin: 0 0 4em;
+	background-color: #2f7ab9;
+    border: 0 none;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 140px;
+	cursor: pointer;
+}
+
+#terms-and-conditions button:hover {
+	opacity: 0.5;
+}
+
+#terms-and-conditions button:active {
+	opacity: 1;
+	color: #fff;
+}
+
+
+#it-is-pretty-bad .message {
+  background-color: #fff;
+  border: 3px solid black;
+  border-radius: 0;
+  color: #333;
+  height: 14em;
+  margin: 2em auto;
+  overflow: auto;
+  padding: 1em 2em;
+  width: 50em;
+  max-width: 1000px;
+}
+
+#it-is-pretty-bad button {
+  float: right;
+}
+
+#terms-and-conditions .terms {
+  background-color: #fff;
+  border: 3px solid black;
+  border-radius: 0;
+  color: #333;
+  height: 80%;
+  margin: 2em auto;
+  overflow: auto;
+  padding: 2em;
+  width: auto;
+  max-width: 1000px;
+}
+
+
+.infax-slider {
+	margin: 0 12px;
+	border: 0;
+}
+
+#terms-and-conditions label {
+  padding-left: 0.5em;
+  font-weight: bold;
+}
+
+.infax.block .title {
+	display: inline;
+	margin: 0 auto;
+}
+
+.infax.block .right {
+	float: right;
+}
+
+.infax.block .left {
+	float: left;
+	line-height: 22.4px;
+}
+
+.infax.block .fa {
+	color: #aaa;
+}
+
+.infax.block .gauge {
+	padding: 5px 10px;
+	text-align: center;
+	font-size: 12px;
+	border: 1px solid #dadad7;
+	vertical-align: middle;
+
+}
+
+.infax.block .gauge.confidence {
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ffffff 0%, #f1f1ee 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(100%,#f1f1ee)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ffffff 0%,#f1f1ee 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ffffff 0%,#f1f1ee 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ffffff 0%,#f1f1ee 100%); /* IE10+ */
+	background: linear-gradient(to right,  #ffffff 0%,#f1f1ee 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dcdcdc',GradientType=1 ); /* IE6-9 */
+}
+
+.infax.block .gauge.records {
+	background: #f1f1ee; /* Old browsers */
+	background: -moz-linear-gradient(left,  #f1f1ee 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f1f1ee), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #f1f1ee 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #f1f1ee 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #f1f1ee 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to right,  #f1f1ee 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1ee', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+.infax-details {
+	display: none;
+	background: #f1f1ee;
+	margin: 1em 0;
+	padding: 0.5em 1em;
+}
+
+.infax-details span {
+
+}
+
+.infax-details span.infax-prog-num {
+	float: right;
+}
+
+.ui-slider-handle.ui-state-default {
+	background: #2f7ab9;
+	border: 0 none;
+}
+
+@media print{
+
+body {
+      color: #000;
+      background: #fff;
+	  font-size: 14px;
+}
+
+.masthead h1, .masthead h1 a {
+    color: #000;
+}
+
+.masthead h2, .masthead h2 a {
+    color: #555;
+}
+
+h1, h2, h3, h4, h5 {
+   page-break-after: avoid;
+}
+
+.listings-content h1 {
+    font-size: 26px;
+    margin: 0;
+}
+
+dl h3 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+dl img.logo {
+    height: auto;
+    margin-bottom: 0;
+    width: 80px;
+}
+
+a:after{
+	content:" ";
+}
+
+#blq-global, #orb-header, .bbc-nav-container, .masthead .choices ul, .fa-caret-down, .main-search-container, .browse-issues, .tv-or-radio, .make-it-better, .download-pdf-btn, .public-view-btn, .browse-issues-btn, .blue-text-btn, .relevant-links, .numbers, .about, .right-col hr, .search-results-services, .search-results-orderby .order-results, ul.search-pages, .external-warning, .about-project, #orb-footer, .bbc-footer-container {
+	display: none!important;
+}
+
+.primary-content, .right-col {
+    margin: 0;
+    width: 100%;
+	float: none;
+}
+
+aside.block {
+	border-bottom: 1px solid #ddd;
+}
+
+.day-week-slider a {
+	opacity: 0.4;	
+	color: #000!important;
+}
+
+.day-week-slider .current a {
+	opacity: 1;
+	color: #000!important;
+}
+
+hr.section {
+	height: 1px;
+}
+
+.right-col .issue.block {
+	page-break-inside: avoid;
+}
+
+
+} /* end printed styles */
+
+
+/* responsive width styles */
+@media screen and (max-width: 767px) {
+
+.contained-width {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.masthead .header, .masthead .choices, .main-search .search-input, .align-left, .align-right, .masthead ul, .main-search .search-options, .options, .advanced-search-options, .primary-content,  .right-col, .welcome .align-right, .about-project .align-right, .programme-details .right-col  {
+    float: none;
+}
+
+.masthead a, .main-search a {
+    padding: 0 6px;
+}
+
+.main-search li.advanced a {
+    padding: 0 15px 0 0;
+}
+
+
+#orb-modules .welcome h1 {
+    font-size: 38px;
+}
+
+.header .title, .header .description {
+    line-height: 65px;
+}
+
+.header .description {
+    padding-left: 0;
+}
+
+.main-search .search-input {
+    width: 100%;
+}
+
+.radio-times-search .searchtext {
+    margin: 0 0 1em 1em;
+    width: 85%;
+}
+
+.main-search .search-options {
+    width: 100%;
+}
+
+.masthead a.reveal.tv-toggle {
+    padding: 0 10px 0 5px;
+}
+
+.btn.btn-search {
+    top: 5px;
+}
+
+.masthead ul {
+    margin-top: 1em;
+}
+
+.masthead .choices li {
+    vertical-align: top;
+}
+
+.masthead li {
+    min-height: 58px
+}
+
+.masthead h1, .masthead h1 a, .masthead h2, .masthead h2 a {
+    line-height: 80px;
+}
+
+.main-search .search-input {
+    display: block;
+    width: 95%;
+	position: relative;
+}
+    
+.radio-times-search .searchtext {
+    margin: 0;
+    width: 95%;
+}
+
+.main-search .search-options {
+    display: block;
+    margin: 1em 0 0;
+    padding-bottom: 1em;
+    text-align: left;
+    width: 95%;
+}
+
+.main-search ul {
+    margin: 0 1em 0 0;
+}
+
+#terms-and-conditions button {
+    width: 100%;
+}
+
+.order-results {
+    margin-left: 0;
+    width: 100%;
+}
+
+.breadcrumbs li {
+    padding: 5px 10px;
+}
+
+.breadcrumbs a {
+    padding-right: 5px;
+}
+
+.breadcrumbs li.year:hover .choose-year-wrapper {
+	width: 100%;
+	text-align: center; 
+}
+
+.breadcrumbs li.year:hover .choose-year-wrapper{
+	left: 0%;
+}
+
+.day-week-slider li {
+    font-size: 12px;
+}
+
+.num-1, .sidebar-num-1 {
+    color: #777777;
+    font-size: 26px;
+}
+
+.inline-links a {
+    font-size: 16px;
+}
+
+.inline-links.faq-about a {
+    font-size: 24px;
+}
+
+.day-week-slider li {
+    font-size: 10px;
+}
+
+.welcome .align-left, .about-project .align-left, .text-page .align-left {
+    max-width: 100%;
+	float: none;
+	position: relative;
+}
+
+.welcome .align-right, .about-project .align-right {
+    max-width: 80%;
+}
+
+.about .align-right img {
+	margin-top: 1em;
+}
+
+.options {
+    display: block;
+    width: 100%;
+}
+
+.advanced-search {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.advanced-search-options.media-channels {
+    width: 95%;
+}
+
+.media-channels li {
+    margin: 0 0 1em;
+	display: block;
+}
+
+.advanced-search-options .block {
+	float: left;
+    margin-right: 1em;
+    width: 40%;
+}
+
+.advanced-search-options.years label, .advanced-search-options.months label {
+	display: block;
+}
+
+input[type="checkbox"], input[type="radio"], label, select, input {
+    
+}
+
+.advanced-search-options {
+	margin-right: 0;
+}
+
+.advanced-search-options.time {
+	float: none;
+}
+
+.advanced-search-options.weekdays {
+    line-height: 1.4em;
+    width: 100%;
+}
+
+.advanced-search-options.reset {
+    float: none;
+    margin-top: 1.1em;
+}
+
+.result {
+    padding-left: 0;
+}
+
+.result .date-time {
+    position: relative;
+	float: none;
+	text-align: left;
+	width: auto;
+}
+
+.result .date-time br {
+	display: none;
+}
+
+.result img.service-icon {
+    float: none;
+    position: relative;
+}
+
+.result h2 {
+    margin-bottom: 0.5em;
+}
+
+.result .date-time a {
+    margin-top: 0;
+}
+
+.listing, .result {
+    padding: 1em 0;
+}
+
+.listing a {
+    display: block;
+}
+
+
+.listing time {
+    position: relative;
+}
+	
+.advanced-search-options.submit button[type="submit"] {
+    display: block;
+    float: none;
+    margin: 1em 0;
+	width: 100%;
+}
+
+.primary-content, .right-col {
+    width: 100%;
+}
+
+.right-col .num-block {
+    display: block;
+    margin: 30px 0;
+}
+
+.month-issues .month, .day-week-slider li.outlier  {
+    display: none;
+}
+
+.month-issues th {
+    font-size: 18px;
+}
+
+.issue-date .station {
+    min-height: 5em;
+	width: 42%;
+	padding: 1em 1em 1em 0;
+}
+
+.right-col, .right-col.topfade, .right-col.bottomfade {
+    background: none;
+}
+
+.right-col .block {
+    margin: 0 10px 20px 0;
+}
+
+.right-col hr {
+    margin: 1.5em 0 1.5em 0;
+}
+		
+.programme-details .right-col {
+    clear: both;
+	background: none;
+	width: 100%;
+}
+
+.issue-detail img {
+    display: block;
+    left: 0px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.issue-detail .text {
+    display: block;
+    left: 0px;
+    margin: 20px 0 0;
+    max-width: 100%;
+
+}
+
+.text-page dt {
+    float: none;
+    padding: 10px 0 0;
+    width: auto;
+}
+
+.text-page dd {
+    margin: 0;
+    padding: 10px 0 0.5em;
+	border-top: 0;
+}
+
+.programme-content .alert-bar-grey .fa-stack.fa-lg {
+    margin-left: 0.25em;
+	display: block;
+}
+.alert-bar-grey span.message {
+    display: block;
+    margin: 0 0.5em;
+    width: 100%;
+}
+
+.edit-btn.inline, .save-btn.inline, .cancel-btn.inline {
+    clear: right;
+    float: right;
+}
+
+#message-popup {
+    padding: 2em 0.5em;
+}
+
+} /* end responsive styles */
