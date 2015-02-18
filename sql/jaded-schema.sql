@@ -29,6 +29,7 @@ CREATE TABLE `wind_grid` (
   `tx` int(10) unsigned NOT NULL,
   `zoom` int(3) NOT NULL,
   `datum` double NOT NULL,
+  `peak` double DEFAULT NULL,
   KEY `wind_grid_tx` (`tx`),
   KEY `wind_grid_ty` (`ty`),
   KEY `wind_grid_zoom` (`zoom`)
@@ -48,4 +49,4 @@ CREATE TABLE `wind_grid` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-18  4:09:27
+-- Dump completed on 2015-02-18 11:23:26
