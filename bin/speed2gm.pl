@@ -37,27 +37,24 @@ sub convert_grid {
   my ( $zoom, $min_lat, $min_lon, $max_lat, $max_lon )
    = calc_range( $max_e, $max_n, $gsz );
 
-  $min_lat = int( $min_lat / $tsq );
-  $max_lat = int( $max_lat / $tsq );
-  $min_lon = int( $min_lon / $tsq );
-  $max_lon = int( $max_lon / $tsq );
+  $min_lat = int($min_lat);
+  $max_lat = int($max_lat);
+  $min_lon = int($min_lon);
+  $max_lon = int($max_lon);
 
-  printf "zoom: %d, [%12.3f, %12.3f] [%12.3f, %12.3f]\n", $zoom, $min_lat,
-   $min_lon, $max_lat, $max_lon;
+  printf "# zoom: %d, [%12.3f, %12.3f] [%12.3f, %12.3f]\n", $zoom,
+   $min_lat, $min_lon, $max_lat, $max_lon;
 
   my $gs = make_grid_sample( $grid, $gsz, $max_e, $max_n );
 
-  my $d_lat = ( $max_lat - $min_lat ) / 80;
-  my $d_lon = ( $max_lon - $min_lon ) / 20;
-
-  for ( my $lat = $min_lat; $lat < $max_lat; $lat += $d_lat ) {
-    for ( my $lon = $min_lon; $lon < $max_lon; $lon += $d_lon ) {
-      my ( $e, $n ) = gm_to_grid( $lat, $lon, $zoom - $tsz );
+  for my $lat ( $min_lat .. $max_lat ) {
+    for my $lon ( $min_lon .. $max_lon ) {
+      my ( $e, $n ) = gm_to_grid( $lat, $lon, $zoom );
       my $gv = $gs->( $e, $n );
-      if ($gv) { printf " %5.2f", $gv }
-      else     { print '      ' }
+      if ($gv) {
+        print "$lat, $lon, $gv\n";
+      }
     }
-    print "\n";
   }
 }
 
