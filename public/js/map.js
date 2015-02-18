@@ -10,9 +10,6 @@ $(function() {
   $.extend(CoordMapType.prototype, (function() {
     return {
       tileSize: new google.maps.Size(1024, 1024),
-      maxZoom: 19,
-      name: "Tile #s",
-      alt: "Wind Speed Map",
 
       _tileURL: function(y, x, size, zoom) {
         var xx = x * size;
@@ -22,7 +19,7 @@ $(function() {
 
       _heatColour: function(v, a) {
         var vv = Math.pow(Math.max(0, Math.min(v, 1)), 0.5);
-        var rgb = hsvToRgb(1 - vv, 1, vv);
+        var rgb = hsvToRgb((1 - vv) * 0.9, 1, vv);
         return 'rgba(' + Math.floor(rgb[0]) + ',' + Math.floor(rgb[1]) + ',' + Math.floor(rgb[2]) + ',' + a + ')';
       },
 
@@ -32,7 +29,6 @@ $(function() {
           height: this.tileSize.height + 'px'
         });
 
-        // Get a 4 by 4 area
         var url = this._tileURL(coord.y, coord.x, 16, zoom + 2);
         var self = this;
 
