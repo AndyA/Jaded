@@ -2,7 +2,7 @@ $(function() {
 
   function CoordMapType() {}
 
-  CoordMapType.prototype.tileSize = new google.maps.Size(128, 128);
+  CoordMapType.prototype.tileSize = new google.maps.Size(256, 256);
   CoordMapType.prototype.maxZoom = 19;
 
   CoordMapType.prototype.getTile = function(coord, zoom, ownerDocument) {
@@ -23,7 +23,7 @@ $(function() {
           lat: 51.507991,
           lng: -0.084682
         },
-        zoom: 13
+        zoom: 9
       };
 
       var map = new google.maps.Map($elt[0], mapOptions);
