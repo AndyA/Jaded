@@ -60,23 +60,58 @@ $(function() {
     }
   })());
 
+  function makeFragment(map) {
+    return map.getCenter().toUrlValue() + ',' + map.getZoom();
+  }
+
+  function setFragment(map) {
+    window.location.hash = makeFragment(map);
+  }
+
+  function parseFragment(frag) {
+    if (frag == null || frag.length == 0 || frag.charAt(0) != '#') return null;
+    return frag.substr(1).split(',');
+  }
+
   function makeMap($elt) {
+    var frag = parseFragment(window.location.hash);
+
+    var mapOptions = {
+      center: {
+        lat: 51.507991,
+        lng: -0.084682
+      },
+      zoom: 9
+    };
+
+    if (frag) {
+      if (frag.length >= 2) {
+        mapOptions.center.lat = 1 * frag[0];
+        mapOptions.center.lng = 1 * frag[1];
+      }
+      if (frag.length >= 3) {
+        mapOptions.zoom = 1 * frag[2];
+      }
+    }
+
     google.maps.event.addDomListener(window, 'load', function() {
-      var mapOptions = {
-        center: {
-          lat: 51.507991,
-          lng: -0.084682
-        },
-        zoom: 9
-      };
 
       var map = new google.maps.Map($elt[0], mapOptions);
       map.overlayMapTypes.insertAt(0, new CoordMapType(4, 12, 1));
-      return map;
+
+      google.maps.event.addListener(map, 'center_changed', function() {
+        setFragment(map);
+      });
+
+      google.maps.event.addListener(map, 'zoom_changed', function() {
+        setFragment(map);
+      });
+
+      setFragment(map);
     });
   }
 
-  var map = makeMap($('#map'));
+  makeMap($('#map'));
 
   function heatColour(v, a) {
     var vv = Math.max(0, Math.min(v, 1));
