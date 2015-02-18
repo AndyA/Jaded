@@ -81,7 +81,8 @@ $(function() {
         lat: 51.507991,
         lng: -0.084682
       },
-      zoom: 9
+      zoom: 9,
+      mapTypeId: google.maps.MapTypeId.SATELLITE
     };
 
     if (frag) {
