@@ -17,8 +17,8 @@ print "Creating level $lvl from ", $lvl + 1, "\n";
 database->do( 'DELETE FROM wind_grid WHERE zoom=?', {}, $lvl );
 database->do(
   join( ' ',
-    'INSERT INTO wind_grid (ty, tx, zoom, datum)',
-    'SELECT ty DIV 2 AS hty, tx DIV 2 AS htx, ? AS zoom, SUM(datum)/4 AS datum',
+    'INSERT INTO wind_grid (ty, tx, zoom, datum, peak)',
+    'SELECT ty DIV 2 AS hty, tx DIV 2 AS htx, ? AS zoom, SUM(datum)/4 AS datum, MAX(peak) AS peak',
     'FROM wind_grid',
     'WHERE zoom=?',
     'GROUP BY htx, hty' ),
