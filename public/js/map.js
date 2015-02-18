@@ -8,7 +8,7 @@ $(function() {
 
   $.extend(CoordMapType.prototype, (function() {
     return {
-      tileSize: new google.maps.Size(256, 256),
+      tileSize: new google.maps.Size(1024, 1024),
       maxZoom: 19,
       name: "Tile #s",
       alt: "Wind Speed Map",
@@ -32,7 +32,7 @@ $(function() {
         });
 
         // Get a 4 by 4 area
-        var url = this._tileURL(coord.y, coord.x, 4, zoom + 2);
+        var url = this._tileURL(coord.y, coord.x, 16, zoom + 2);
         var self = this;
 
         $.get(url).done(function(data) {

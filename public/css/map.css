@@ -19,8 +19,8 @@ html, body {
   font-weight: bold;
   text-align: center;
   float: left;
-  width: 25%;
-  height: 25%;
+  width: 6.25%;
+  height: 6.25%;
   display: table-cell;
   vertical-align: middle;
 }
