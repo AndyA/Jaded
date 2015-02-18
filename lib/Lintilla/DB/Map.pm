@@ -2,6 +2,8 @@ package Lintilla::DB::Map;
 
 use Moose;
 
+use List::Util qw(sum);
+
 =head1 NAME
 
 Lintilla::DB::Map - Map stuff
@@ -9,20 +11,23 @@ Lintilla::DB::Map - Map stuff
 =cut
 
 has dbh => ( is => 'ro', required => 1 );
+has max_zoom => ( is => 'ro', required => 1, default => 17 );
 
 sub _empty_grid {
   my ( $self, $height, $width ) = @_;
   return [map [map 0, 0 .. $width - 1], 0 .. $height - 1];
 }
 
-sub wind_grid {
-  my ( $self, $ty0, $tx0, $ty1, $tx1, $zoom ) = @_;
+sub _raw_wind_grid {
+  my ( $self, $channel, $ty0, $tx0, $ty1, $tx1, $zoom ) = @_;
+
+  die unless $channel =~ /^(?:peak|datum)$/;
 
   my $grid = $self->_empty_grid( $ty1 - $ty0, $tx1 - $tx0 );
 
   my $data = $self->dbh->selectall_arrayref(
     join( ' ',
-      'SELECT ty-? AS y, tx-? AS x, datum FROM wind_grid',
+      'SELECT ty-? AS y, tx-? AS x, datum, peak FROM wind_grid',
       'WHERE zoom=?',
       'AND ty BETWEEN ? AND ?',
       'AND tx BETWEEN ? AND ?' ),
@@ -34,10 +39,18 @@ sub wind_grid {
   );
 
   for my $tile (@$data) {
-    $grid->[$tile->{y}][$tile->{x}] = 1 * sprintf '%.2f', $tile->{datum};
+    $grid->[$tile->{y}][$tile->{x}] = 1 * sprintf '%.2f', $tile->{$channel};
   }
 
   return $grid;
+}
+
+sub wind_grid {
+  my ( $self, $channel, $ty0, $tx0, $ty1, $tx1, $zoom ) = @_;
+  my $dz = $zoom - $self->max_zoom;
+  return $self->_raw_wind_grid( $channel, $ty0, $tx0, $ty1, $tx1, $zoom )
+   if $dz <= 0;
+  return [];
 }
 
 1;

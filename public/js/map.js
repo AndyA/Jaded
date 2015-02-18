@@ -1,9 +1,10 @@
 $(function() {
 
-  function CoordMapType(minv, maxv, alpha) {
+  function CoordMapType(minv, maxv, alpha, channel) {
     this.minv = minv;
     this.maxv = maxv;
     this.alpha = alpha;
+    this.channel = channel || 'datum';
   }
 
   $.extend(CoordMapType.prototype, (function() {
@@ -16,7 +17,7 @@ $(function() {
       _tileURL: function(y, x, size, zoom) {
         var xx = x * size;
         var yy = y * size;
-        return '/map/ws/' + yy + '/' + xx + '/' + (yy + size) + '/' + (xx + size) + '/' + zoom;
+        return '/map/ws/' + this.channel + '/' + yy + '/' + xx + '/' + (yy + size) + '/' + (xx + size) + '/' + zoom;
       },
 
       _heatColour: function(v, a) {
@@ -78,10 +79,10 @@ $(function() {
 
     var mapOptions = {
       center: {
-        lat: 51.507991,
-        lng: -0.084682
+        lat: 54.780986,
+        lng: -4.259487
       },
-      zoom: 9,
+      zoom: 7,
       mapTypeId: google.maps.MapTypeId.SATELLITE
     };
 
@@ -98,7 +99,7 @@ $(function() {
     google.maps.event.addDomListener(window, 'load', function() {
 
       var map = new google.maps.Map($elt[0], mapOptions);
-      map.overlayMapTypes.insertAt(0, new CoordMapType(4, 12, 1));
+      map.overlayMapTypes.insertAt(0, new CoordMapType(4, 12, 1, 'peak'));
 
       google.maps.event.addListener(map, 'center_changed', function() {
         setFragment(map);

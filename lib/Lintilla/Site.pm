@@ -42,10 +42,10 @@ prefix '/map' => sub {
       '/map/ws',   param('ty'), param('tx'),
       param('ty'), param('tx'), param('zoom') );
   };
-  get '/ws/:ty0/:tx0/:ty1/:tx1/:zoom' => sub {
+  get '/ws/:channel/:ty0/:tx0/:ty1/:tx1/:zoom' => sub {
     return db->wind_grid(
-      param('ty0'), param('tx0'), param('ty1'), param('tx1'),
-      param('zoom')
+      param('channel'), param('ty0'), param('tx0'), param('ty1'),
+      param('tx1'),     param('zoom')
     );
   };
   get '/**' => sub { forward '/map' };
