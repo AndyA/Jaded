@@ -34,7 +34,7 @@ sub wind_grid {
   );
 
   for my $tile (@$data) {
-    $grid->[$tile->{y}][$tile->{x}] = sprintf '%.2f', $tile->{datum};
+    $grid->[$tile->{y}][$tile->{x}] = 1 * sprintf '%.2f', $tile->{datum};
   }
 
   return $grid;
