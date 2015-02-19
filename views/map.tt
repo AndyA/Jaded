@@ -1,1 +1,5 @@
 <div id="map"></div>
+<div id="controls">
+  <label><input type="radio" name="type" value="datum">Average</label>
+  <label><input type="radio" name="type" value="peak">Peak</label>
+</div>

@@ -25,13 +25,28 @@ html, body {
   vertical-align: middle;
 }
 
-#key {
+.map-tile .speed-tile.hidden {
+  display: none;
+}
+
+#controls {
   z-index: 99999;
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  width: 200px;
-  height: 40px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 6px;
+  top: 30px;
+  color: black;
+  border: 1px solid #888;
+  border-radius: 4px;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+}
+
+#controls label {
+  display: block;
+  margin: 4px 2px;
+}
+
+#controls input {
+  margin-right: 6px;
 }

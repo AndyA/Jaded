@@ -4,23 +4,36 @@ $(function() {
     this.minv = minv;
     this.maxv = maxv;
     this.alpha = alpha;
-    this.channel = channel || 'datum';
+    this.channel = channel;
   }
 
   $.extend(CoordMapType.prototype, (function() {
+    var channels = ['datum', 'peak'];
     return {
       tileSize: new google.maps.Size(1024, 1024),
 
       _tileURL: function(y, x, size, zoom) {
         var xx = x * size;
         var yy = y * size;
-        return '/map/ws/' + this.channel + '/' + yy + '/' + xx + '/' + (yy + size) + '/' + (xx + size) + '/' + zoom;
+        return '/map/ws/' + yy + '/' + xx + '/' + (yy + size) + '/' + (xx + size) + '/' + zoom;
       },
 
       _heatColour: function(v, a) {
         var vv = Math.pow(Math.max(0, Math.min(v, 1)), 0.5);
         var rgb = hsvToRgb((1 - vv) * 0.9, 1, vv);
         return 'rgba(' + Math.floor(rgb[0]) + ',' + Math.floor(rgb[1]) + ',' + Math.floor(rgb[2]) + ',' + a + ')';
+      },
+
+      setChannel: function(channel) {
+        if (this.channel == channel) return;
+        this.channel = channel;
+
+        // Reflect change
+        for (var c = 0; c < channels.length; c++) {
+          var $elt = $('.map-tile .speed-tile.' + channels[c]);
+          if (channels[c] == channel) $elt.removeClass('hidden');
+          else $elt.addClass('hidden');
+        }
       },
 
       getTile: function(coord, zoom, ownerDocument) {
@@ -33,17 +46,20 @@ $(function() {
         var self = this;
 
         $.get(url).done(function(data) {
-          for (var y = 0; y < data.length; y++) {
-            var row = data[y];
-            for (var x = 0; x < row.length; x++) {
-              var col = self._heatColour((row[x] - self.minv) / (self.maxv - self.minv), self.alpha);
-              if (row[x] >= self.minv) {
-                $tile.append($('<div class="speed-tile"></div>').text(row[x]).css({
-                  color: col
-                }));
-              }
-              else {
-                $tile.append($('<div class="speed-tile empty"></div>'));
+          for (var y = 0; y < data.datum.length; y++) {
+            for (var x = 0; x < data.datum[y].length; x++) {
+              for (var c = 0; c < channels.length; c++) {
+                var chan = channels[c];
+                var sample = data[chan][y][x];
+                var $div = $('<div class="speed-tile"></div>').addClass(chan);
+                if (chan != self.channel) $div.addClass('hidden');
+                if (sample >= self.minv) {
+                  var col = self._heatColour((sample - self.minv) / (self.maxv - self.minv), self.alpha);
+                  $div.text(sample).css({
+                    color: col
+                  });
+                }
+                $tile.append($div);
               }
             }
           }
@@ -58,7 +74,7 @@ $(function() {
   })());
 
   function makeFragment(map) {
-    return map.getCenter().toUrlValue() + ',' + map.getZoom();
+    return map.getCenter().toUrlValue() + ',' + map.getZoom() + ',' + getChannel();
   }
 
   function setFragment(map) {
@@ -70,8 +86,14 @@ $(function() {
     return frag.substr(1).split(',');
   }
 
+  function getChannel() {
+    return $('#controls input:checked').val();
+  }
+
   function makeMap($elt) {
     var frag = parseFragment(window.location.hash);
+
+    var channel = 'datum';
 
     var mapOptions = {
       center: {
@@ -90,12 +112,16 @@ $(function() {
       if (frag.length >= 3) {
         mapOptions.zoom = 1 * frag[2];
       }
+      if (frag.length >= 4) {
+        channel = frag[3];
+      }
     }
 
     google.maps.event.addDomListener(window, 'load', function() {
 
       var map = new google.maps.Map($elt[0], mapOptions);
-      map.overlayMapTypes.insertAt(0, new CoordMapType(4, 12, 1, 'peak'));
+      var overlay = new CoordMapType(4, 12, 1, channel);
+      map.overlayMapTypes.insertAt(0, overlay);
 
       google.maps.event.addListener(map, 'center_changed', function() {
         setFragment(map);
@@ -105,8 +131,14 @@ $(function() {
         setFragment(map);
       });
 
-      setFragment(map);
+      $('#controls input:radio').change(function(ev) {
+        var channel = $(this).val();
+        overlay.setChannel(channel);
+        setFragment(map);
+      });
     });
+
+    $('#controls input:radio[value="' + channel + '"]').prop('checked', true);
   }
 
   makeMap($('#map'));
