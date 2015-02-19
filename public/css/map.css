@@ -25,10 +25,6 @@ html, body {
   vertical-align: middle;
 }
 
-.map-tile .speed-tile.hidden {
-  display: none;
-}
-
 .map-tile .speed-set.hidden {
   display: none;
 }
