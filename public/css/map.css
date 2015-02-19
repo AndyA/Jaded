@@ -29,6 +29,10 @@ html, body {
   display: none;
 }
 
+.map-tile .speed-set.hidden {
+  display: none;
+}
+
 #controls {
   z-index: 99999;
   position: absolute;
