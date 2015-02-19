@@ -53,7 +53,7 @@ prefix '/map' => sub {
 
 get '/map' => sub {
   template 'map',
-   { title => 'A Map', resources => resources->render('js.map') };
+   { title => 'UK Average Wind Speed Map', resources => resources->render('js.map') };
 };
 
 get '/' => sub {
