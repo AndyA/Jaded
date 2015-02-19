@@ -2,4 +2,5 @@
 <div id="controls">
   <label><input type="radio" name="type" value="datum">Average</label>
   <label><input type="radio" name="type" value="peak">Maximum</label>
+  <label><input type="radio" name="type" value="none">None</label>
 </div>
