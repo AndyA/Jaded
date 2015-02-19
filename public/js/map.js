@@ -30,7 +30,7 @@ $(function() {
 
         // Reflect change
         for (var c = 0; c < channels.length; c++) {
-          var $elt = $('.map-tile .speed-set.' + channels[c]);
+          var $elt = $('.map-tile .speed-tile.' + channels[c]);
           if (channels[c] == channel) $elt.removeClass('hidden');
           else $elt.addClass('hidden');
         }
@@ -46,24 +46,22 @@ $(function() {
         var self = this;
 
         $.get(url).done(function(data) {
-          for (var c = 0; c < channels.length; c++) {
-            var chan = channels[c];
-            var $box = $('<div class="speed-set"></div>').addClass(chan);
-            if (chan != self.channel) $box.addClass('hidden');
-            for (var y = 0; y < data.datum.length; y++) {
-              for (var x = 0; x < data.datum[y].length; x++) {
+          for (var y = 0; y < data.datum.length; y++) {
+            for (var x = 0; x < data.datum[y].length; x++) {
+              for (var c = 0; c < channels.length; c++) {
+                var chan = channels[c];
                 var sample = data[chan][y][x];
-                var $div = $('<div class="speed-tile"></div>');
+                var $div = $('<div class="speed-tile"></div>').addClass(chan);
+                if (chan != self.channel) $div.addClass('hidden');
                 if (sample >= self.minv) {
                   var col = self._heatColour((sample - self.minv) / (self.maxv - self.minv), self.alpha);
                   $div.text(sample).css({
                     color: col
                   });
                 }
-                $box.append($div);
+                $tile.append($div);
               }
             }
-            $tile.append($box);
           }
         });
 
