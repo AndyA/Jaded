@@ -48,12 +48,6 @@ prefix '/map' => sub {
       param('zoom')
     );
   };
-  get '/ws/:channel/:ty0/:tx0/:ty1/:tx1/:zoom' => sub {
-    return db->wind_grid(
-      param('channel'), param('ty0'), param('tx0'), param('ty1'),
-      param('tx1'),     param('zoom')
-    );
-  };
   get '/**' => sub { forward '/map' };
 };
 
