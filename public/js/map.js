@@ -131,6 +131,11 @@ $(function() {
         setFragment(map);
       });
 
+      var $ctl = $('#controls').remove();
+      var ctl_div = $ctl[0];
+      ctl_div.index = 1;
+      map.controls[google.maps.ControlPosition.TOP_RIGHT].push(ctl_div);
+
       $('#controls input:radio').change(function(ev) {
         var channel = $(this).val();
         overlay.setChannel(channel);
