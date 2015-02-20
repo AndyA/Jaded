@@ -140,7 +140,7 @@ $(function() {
       var $ctl = $('#controls').detach();
       var ctl_div = $ctl[0];
       ctl_div.index = 1;
-      map.controls[google.maps.ControlPosition.TOP_RIGHT].push(ctl_div);
+      map.controls[google.maps.ControlPosition.RIGHT_TOP].push(ctl_div);
     });
 
     $('#controls input:radio[value="' + channel + '"]').prop('checked', true);

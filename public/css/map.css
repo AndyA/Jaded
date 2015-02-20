@@ -30,11 +30,10 @@ html, body {
 }
 
 #controls {
-  z-index: 99999;
   position: relative;
   color: black;
   border-radius: 2px;
-  margin-top: 5px;
+  margin: 5px;
   padding: 4px 8px;
   background-color: white;
   font-size: 11px;
