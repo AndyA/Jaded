@@ -5,6 +5,7 @@ use v5.10;
 use Dancer ':syntax';
 use Dancer::Plugin::Database;
 use Lintilla::DB::Map;
+use Lintilla::Site::Dirt;
 use Lintilla::Tools::Enqueue;
 
 =head1 NAME

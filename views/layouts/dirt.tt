@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>[% title | html %]</title>
+    <script data-main="/dirt/js/main" src="/dirt/js/require.js"></script>
+  </head>
+  <body>
+    [% content %]
+  </body>
+</html>
